@@ -3,7 +3,7 @@ import UsedFilters from "../components/UsedFilters.js";
 import { getProductsByFilter } from "../services/productFetch.js";
 import STORE from "./store.js";
 
-export async function renderProducts() {
+export async function renderPage() {
   const usedFilters = document.querySelector('#used-filters');
   usedFilters.innerHTML = "";
 

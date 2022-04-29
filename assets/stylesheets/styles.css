@@ -49,6 +49,7 @@ main {
   display: flex;
   justify-content: center;
   width: 100%;
+  min-height: calc(100vh - 170px);
 }
 
 .main-content {
@@ -67,4 +68,12 @@ main {
 #used-filters p {
   height: 40px;
   border-bottom: solid 1px #6a6a6a;
+}
+
+footer {
+  height: 40px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
