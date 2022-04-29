@@ -1,4 +1,4 @@
-const BASE_URL = 'http://market-backend-alxdrian.vercel.app/api';
+const BASE_URL = 'https://market-backend-alxdrian.vercel.app/api';
 
 function getProducts() {
   const response = fetch(`${BASE_URL}/products`).then(res => res.json());
