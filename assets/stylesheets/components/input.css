@@ -1,0 +1,26 @@
+.input-container {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  border-radius: 10px;
+  width: 40%;
+  min-width: 300px;
+}
+
+.input-content {
+  border: none;
+  border-radius: 10px 0 0 10px;
+  font-size: 1rem;
+  outline: none;
+  height: 100%;
+  color: #6a6a6a;
+  width: calc(100% - 50px);
+}
+
+.input-suffix {
+  height: 100%;
+  width: 50px;
+  background-color: #6a6a6a;
+  border: none;
+  border-radius: 0 10px 10px 0;
+}
