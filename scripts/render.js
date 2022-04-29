@@ -4,7 +4,6 @@ import { getProductsByFilter } from "../services/productFetch.js";
 import STORE from "./store.js";
 
 export async function renderPage() {
-  console.log(STORE)
 
   // Elimina el mensaje previo de detalles de filtro usado
   const messageFilters = document.querySelector('#message-filters');
@@ -30,26 +29,32 @@ export async function renderPage() {
    messageFilters.innerHTML = MessageFilters({name: STORE.name, category: STORE.category.name});
 
    // Obtiene los productos de la API y los muestra en la página
-  const data = await getProductsByFilter(
-    STORE.name, 
-    STORE.category.id,
-    STORE.minprice,
-    STORE.maxprice,
-    STORE.mindiscount,
-    STORE.maxdiscount
-  );
-  if (data.products.length > 0) {
-    productsListContainer.innerHTML = "";
-    data.products.forEach(product => {
-      productsListContainer.innerHTML += ProductCard(product);
-    });
-  } else {
+  try {
+    const data = await getProductsByFilter(
+      STORE.name, 
+      STORE.category.id,
+      STORE.minprice,
+      STORE.maxprice,
+      STORE.mindiscount,
+      STORE.maxdiscount
+    );
+    if (data.products.length > 0) {
+      productsListContainer.innerHTML = "";
+      data.products.forEach(product => {
+        productsListContainer.innerHTML += ProductCard(product);
+      });
+    } else {
+      productsListContainer.innerHTML = `
+        <div class="no-results">
+          <p>No se encontraron resultados</p>
+        </div>
+      `;
+    }
+  } catch(error) {
     productsListContainer.innerHTML = `
       <div class="no-results">
-        <p>No se encontraron resultados</p>
+        <p>${error}</p>
       </div>
     `;
   }
-  
- 
 }

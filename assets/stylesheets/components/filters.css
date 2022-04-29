@@ -40,4 +40,9 @@
   background-color: #ff6f69;
   color: #fff;
   font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-filter:hover {
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
