@@ -3,6 +3,8 @@ import STORE from "./store.js";
 
 renderPage();
 
+// Agrega un listener para la búsqueda por nombre, luego renderiza los cambios de la vista
+
 const form = document.querySelector('#search');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -10,6 +12,8 @@ form.addEventListener('submit', (e) => {
   STORE.changeName(name);
   renderPage();
 });
+
+// Agrega un listener para la búsqueda por categoría, luego renderiza los cambios de la vista
 
 const categories = document.querySelectorAll('.navbar-item-category');
 categories.forEach(category => {
@@ -23,6 +27,8 @@ categories.forEach(category => {
     renderPage();
   });
 });
+
+// Agrega un listener para el filtro por precio y descuentos, luego renderiza los cambios de la vista
 
 const numericFilters = document.querySelector('#numeric-filters');
 numericFilters.addEventListener('submit', (e) => {

@@ -1,3 +1,5 @@
+// El Store sirve para almacenar los filtros que seran usados en la busqueda de productos
+
 const STORE = {
   name: "",
   category: {

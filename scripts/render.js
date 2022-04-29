@@ -3,6 +3,8 @@ import MessageFilters from "../components/UsedFilters.js";
 import { getProductsByFilter } from "../services/productFetch.js";
 import STORE from "./store.js";
 
+// renderPage actualiza la pagina con los nuevos productos y otros indicadores de filtros
+
 export async function renderPage() {
 
   // Elimina el mensaje previo de detalles de filtro usado
