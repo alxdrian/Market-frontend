@@ -12,9 +12,14 @@
 <body>
   <header>
     <div class="header-content">
-      Market
+      <h1>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+        </svg>
+        Market
+      </h1>
       <form class="input-container" id="search">
-        <input class="input-content" type="text" placeholder="Search want you need!" name="name">
+        <input class="input-content" type="text" placeholder="Search what you need!" name="name">
         <button class="input-suffix" type="submit">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -25,14 +30,14 @@
   </header>
   <nav>
     <ul class="navbar-content">
-      <li class="navbar-item" id="categoria0">Todos</li>
-      <li class="navbar-item" id="categoria1">Bebida energética</li>
-      <li class="navbar-item" id="categoria2">Pisco</li>
-      <li class="navbar-item" id="categoria3">Ron</li>
-      <li class="navbar-item" id="categoria4">Bebida</li>
-      <li class="navbar-item" id="categoria5">Snack</li>
-      <li class="navbar-item" id="categoria6">Cerveza</li>
-      <li class="navbar-item" id="categoria7">Vodka</li>
+      <li class="navbar-item-category" data-category=0>Todos</li>
+      <li class="navbar-item-category" data-category=1>Bebida energética</li>
+      <li class="navbar-item-category" data-category=2>Pisco</li>
+      <li class="navbar-item-category" data-category=3>Ron</li>
+      <li class="navbar-item-category" data-category=4>Bebida</li>
+      <li class="navbar-item-category" data-category=5>Snack</li>
+      <li class="navbar-item-category" data-category=6>Cerveza</li>
+      <li class="navbar-item-category" data-category=7>Vodka</li>
     </ul>
   </nav>
   <main>

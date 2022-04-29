@@ -28,6 +28,21 @@ header {
   padding: 0 20px;
 }
 
+.header-content h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header-content svg {
+  height: 40px;
+  width: 40px;
+  stroke: #fff;
+}
+
 main {
   display: flex;
   justify-content: center;

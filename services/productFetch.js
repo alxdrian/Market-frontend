@@ -18,7 +18,7 @@ export function getProductsByFilter(name, category) {
   if (name !== "") {
     params.push(`name=${name}`);
   }
-  if (category !== 0) {
+  if (category !== "0") {
     params.push(`category=${category}`);
   }
   const response = fetch(`${url}${params.join('&')}`).then(response => {

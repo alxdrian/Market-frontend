@@ -21,14 +21,16 @@ ul {
   max-width: 1200px;
 }
 
-.navbar-item {
+.navbar-item-category {
   height: 100%;
   padding: 0 20px;
   display: flex;
   align-items: center;
+  font-weight: 700;
+  border-radius: 10px 10px 0 0;
 }
 
-.navbar-item:hover {
+.navbar-item-category:hover {
   background-color: #96ceb4;
   color: #fff;
   cursor: pointer;

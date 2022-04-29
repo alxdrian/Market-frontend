@@ -1,6 +1,6 @@
 const STORE = {
   name: "",
-  category: 0,
+  category: "0",
   products: [],
   changeName,
   changeCategory,

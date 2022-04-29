@@ -8,6 +8,15 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   const name = e.target.elements.name.value;
   STORE.changeName(name);
-  console.log(STORE.name);
   renderProducts();
+});
+
+const categories = document.querySelectorAll('.navbar-item-category');
+categories.forEach(category => {
+  category.addEventListener('click', (e) => {
+    console.log(e.target.dataset);
+    const categoryId = e.target.dataset.category;
+    STORE.changeCategory(categoryId);
+    renderProducts();
+  });
 });
