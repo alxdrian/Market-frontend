@@ -11,15 +11,17 @@ body {
 }
 
 header {
-  height: 60px;
+  min-height: 60px;
   background-color: #ff6f69;
   display: flex;
   justify-content: center;
   width: 100%;
+  padding: 5px 0
 }
 
 .header-content{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   height: 100%;
@@ -51,6 +53,18 @@ main {
 
 .main-content {
   display: flex;
+  width: 100%;
   max-width: 1200px;
   padding: 20px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#used-filters {
+  font-weight: 500;
+}
+
+#used-filters p {
+  height: 40px;
+  border-bottom: solid 1px #6a6a6a;
 }

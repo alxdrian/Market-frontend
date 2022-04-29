@@ -16,7 +16,13 @@ categories.forEach(category => {
   category.addEventListener('click', (e) => {
     console.log(e.target.dataset);
     const categoryId = e.target.dataset.category;
-    STORE.changeCategory(categoryId);
+    const categoryName = e.target.innerText;
+    STORE.changeCategory({
+      id: categoryId,
+      name: categoryName
+    });
     renderProducts();
+
   });
 });
+

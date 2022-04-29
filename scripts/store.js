@@ -1,7 +1,9 @@
 const STORE = {
   name: "",
-  category: "0",
-  products: [],
+  category: {
+    id: "0",
+    name: "Todas"
+  },
   changeName,
   changeCategory,
 };
