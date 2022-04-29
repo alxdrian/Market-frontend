@@ -3,6 +3,7 @@
 @import "./components/input.css";
 @import "./components/navbar.css";
 @import "./components/product.css";
+@import "./components/loader.css";
 
 body {
   background-color: #96ceb4;
@@ -66,7 +67,7 @@ main {
 }
 
 #used-filters p {
-  height: 40px;
+  min-height: 40px;
   border-bottom: solid 1px #6a6a6a;
 }
 
