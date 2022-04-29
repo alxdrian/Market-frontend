@@ -43,7 +43,24 @@
   </nav>
   <main>
     <div class="main-content">
-      <div id="used-filters"></div>
+      <div id="used-filters">
+        <p id="message-filters"></p>
+        <form id="numeric-filters">
+          <div>
+          <b>Precio:</b>
+          S/. <input type=number name="minprice" class="number-filter">
+          a
+          S/. <input type=number name="maxprice" class="number-filter">
+        </div>
+        <div>
+          <b>Descuento:</b>
+          <input type=number name="mindiscount" class="number-filter">%
+          a
+          <input type=number name="maxdiscount" class="number-filter">%
+        </div>
+        <button class="btn-filter" #id="button-filter" type="submit">Aplicar</button>
+        </form>
+      </div>
       <div id="products-list-container">
       </div>
     </div>

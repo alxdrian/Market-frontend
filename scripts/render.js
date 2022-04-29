@@ -1,12 +1,14 @@
 import ProductCard from "../components/ProductCard.js";
-import UsedFilters from "../components/UsedFilters.js";
+import MessageFilters from "../components/UsedFilters.js";
 import { getProductsByFilter } from "../services/productFetch.js";
 import STORE from "./store.js";
 
 export async function renderPage() {
+  console.log(STORE)
+
   // Elimina el mensaje previo de detalles de filtro usado
-  const usedFilters = document.querySelector('#used-filters');
-  usedFilters.innerHTML = "";
+  const messageFilters = document.querySelector('#message-filters');
+  messageFilters.innerHTML = "";
   
   // Añade un loading mientras cargan los productos
   const productsListContainer = document.querySelector('#products-list-container');
@@ -24,8 +26,18 @@ export async function renderPage() {
   const newSelectedTab = document.querySelector(`[data-category="${STORE.category.id}"]`);
   newSelectedTab.classList.add('selected');
 
+   // Actualiza el mensaje previo de detalles de filtro usado
+   messageFilters.innerHTML = MessageFilters({name: STORE.name, category: STORE.category.name});
+
    // Obtiene los productos de la API y los muestra en la página
-  const data = await getProductsByFilter(STORE.name, STORE.category.id);
+  const data = await getProductsByFilter(
+    STORE.name, 
+    STORE.category.id,
+    STORE.minprice,
+    STORE.maxprice,
+    STORE.mindiscount,
+    STORE.maxdiscount
+  );
   if (data.products.length > 0) {
     productsListContainer.innerHTML = "";
     data.products.forEach(product => {
@@ -39,6 +51,5 @@ export async function renderPage() {
     `;
   }
   
-  // Actualiza el mensaje previo de detalles de filtro usado
-  usedFilters.innerHTML = UsedFilters({name: STORE.name, category: STORE.category.name});
+ 
 }

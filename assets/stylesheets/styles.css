@@ -4,6 +4,7 @@
 @import "./components/navbar.css";
 @import "./components/product.css";
 @import "./components/loader.css";
+@import "./components/filters.css";
 
 body {
   background-color: #96ceb4;
@@ -60,15 +61,6 @@ main {
   padding: 20px;
   flex-direction: column;
   gap: 20px;
-}
-
-#used-filters {
-  font-weight: 500;
-}
-
-#used-filters p {
-  min-height: 40px;
-  border-bottom: solid 1px #6a6a6a;
 }
 
 footer {

@@ -14,7 +14,6 @@ form.addEventListener('submit', (e) => {
 const categories = document.querySelectorAll('.navbar-item-category');
 categories.forEach(category => {
   category.addEventListener('click', (e) => {
-    console.log(e.target.dataset);
     const categoryId = e.target.dataset.category;
     const categoryName = e.target.innerText;
     STORE.changeCategory({
@@ -25,3 +24,16 @@ categories.forEach(category => {
   });
 });
 
+const numericFilters = document.querySelector('#numeric-filters');
+numericFilters.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const minprice = e.target.elements.minprice.value;
+  const maxprice = e.target.elements.maxprice.value;
+  const mindiscount = e.target.elements.mindiscount.value;
+  const maxdiscount = e.target.elements.maxdiscount.value;
+  STORE.changeMinPrice(minprice);
+  STORE.changeMaxPrice(maxprice);
+  STORE.changeMinDiscount(mindiscount);
+  STORE.changeMaxDiscount(maxdiscount);
+  renderPage();
+});

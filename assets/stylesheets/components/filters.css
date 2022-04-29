@@ -1,0 +1,43 @@
+#used-filters {
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: solid 1px hsl(0, 0%, 42%);
+  align-items: center;
+  padding-bottom: 10px;
+  gap: 5px;
+}
+
+#numeric-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+#numeric-filters div {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 5px;
+}
+
+.number-filter {
+  width: 60px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  padding: 0 5px;
+}
+
+.btn-filter {
+  width: 90px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  padding: 0 5px;
+  background-color: #ff6f69;
+  color: #fff;
+  font-weight: 700;
+}

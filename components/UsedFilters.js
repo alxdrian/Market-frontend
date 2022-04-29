@@ -1,4 +1,4 @@
-function UsedFilters(filters) {
+function MessageFilters(filters) {
   const name = filters.name;
   const category = filters.category;
   let message = "Mostrando "
@@ -8,10 +8,8 @@ function UsedFilters(filters) {
     message += ` resultados de categoría <b>${category}</b>`;
   }
   return `
-    <p>
-      ${message}
-    </p>
+    ${message}
   `;
 }
 
-export default UsedFilters;
+export default MessageFilters;

@@ -11,8 +11,14 @@ export function getProducts() {
   return response
 }
 
-export function getProductsByFilter(name, category) {
-  console.log(name, category);
+export function getProductsByFilter(
+  name, 
+  category,
+  minprice,
+  maxprice,
+  mindiscount,
+  maxdiscount
+) {
   const url = `${BASE_URL}/products/search?`;
   const params = [];
   if (name !== "") {
@@ -20,6 +26,18 @@ export function getProductsByFilter(name, category) {
   }
   if (category !== "0") {
     params.push(`category=${category}`);
+  }
+  if (minprice !== "") {
+    params.push(`pricemin=${minprice*100}`);
+  }
+  if (maxprice !== "") {
+    params.push(`pricemax=${maxprice*100}`);
+  }
+  if (mindiscount !== "") {
+    params.push(`discountmin=${mindiscount}`);
+  }
+  if (maxdiscount !== "") {
+    params.push(`discountmax=${maxdiscount}`);
   }
   const response = fetch(`${url}${params.join('&')}`).then(response => {
     if (response.status === 200) {
