@@ -15,6 +15,7 @@
   height: 100%;
   color: #6a6a6a;
   width: calc(100% - 50px);
+  padding: 0 10px;
 }
 
 .input-suffix {
@@ -23,4 +24,21 @@
   background-color: #6a6a6a;
   border: none;
   border-radius: 0 10px 10px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.input-suffix svg {
+  stroke: #fff;
+  height: 90%;
+  width: 90%;
+}
+
+.input-container:hover {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.input-suffix:hover {
+  opacity: 0.9;
 }

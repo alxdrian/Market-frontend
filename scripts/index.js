@@ -1,14 +1,13 @@
-import ProductCard from "../components/ProductCard.js";
-import { getProducts } from "../services/productFetch.js";
-
-async function renderProducts() {
-  const productsListContainer = document.querySelector('.products-list-container');
-  productsListContainer.innerHTML = '';
-  const data = await getProducts();
-  data.products.forEach(product => {
-    const productCard = ProductCard(product);
-    productsListContainer.innerHTML += productCard;
-  });
-}
+import { renderProducts } from "./render.js";
+import STORE from "./store.js";
 
 renderProducts();
+
+const form = document.querySelector('#search');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = e.target.elements.name.value;
+  STORE.changeName(name);
+  console.log(STORE.name);
+  renderProducts();
+});
