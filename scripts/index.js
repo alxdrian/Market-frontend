@@ -10,6 +10,10 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   const name = e.target.elements.name.value;
   STORE.changeName(name);
+  STORE.changeCategory({
+    id: "0",
+    name: "Todas"
+  });
   renderPage();
 });
 
